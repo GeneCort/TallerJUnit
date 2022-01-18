@@ -37,7 +37,7 @@ public class CustomerTest {
     }
     @Before
     public void setUp() {
-         instance = new Customer("Morty Smith");
+        instance = new Customer("Morty Smith");
         movie = new Movie("Alien Invasion Tomato Monster Mexican "
                 + "Armada Brothers Who Are Just Regular Brothers "
                 + "Running In A Van From An Asteroid And All Sorts"
@@ -81,9 +81,9 @@ public class CustomerTest {
      */
     @org.junit.Test
     public void testStatement() {
-        float total=0;
-        int freq = 0;
-        
+        float total=0; // total amount
+        int freq = 0; //total FrequentRenterPoints
+        //agg juego y pelicula
         instance.addVideoGameRental(gameRental);
         instance.addMovieRental(movRental);
 
