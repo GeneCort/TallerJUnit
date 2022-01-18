@@ -29,8 +29,13 @@ public class MovieRentalTest {
     public static void tearDownClass() {
     }
     
+    Movie theManWhoKnewTooMuch, mulan, slumdogMillionaire;
+
     @Before
     public void setUp() {
+        theManWhoKnewTooMuch = new Movie("The Man Who Knew Too Much", Movie.REGULAR);
+        mulan = new Movie("Mulan", Movie.CHILDRENS);
+        slumdogMillionaire = new Movie("Slumdog Millionaire", Movie.NEW_RELEASE);
     }
     
     @After
@@ -43,12 +48,10 @@ public class MovieRentalTest {
     @Test
     public void testGetDaysRented() {
         System.out.println("getDaysRented");
-        MovieRental instance = null;
-        int expResult = 0;
+        MovieRental instance = new MovieRental(mulan,7);
+        int expResult = 7;
         int result = instance.getDaysRented();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -57,12 +60,11 @@ public class MovieRentalTest {
     @Test
     public void testGetMovie() {
         System.out.println("getMovie");
-        MovieRental instance = null;
-        Movie expResult = null;
+        MovieRental instance = new MovieRental(slumdogMillionaire,1);
+        Movie expResult = slumdogMillionaire;
         Movie result = instance.getMovie();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }
