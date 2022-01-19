@@ -18,11 +18,16 @@ import static org.junit.Assert.*;
  */
 public class MovieTest {
     
+    Movie instance;
+    String little;
+    int priceCode;
+    
     public MovieTest() {
     }
     
     @BeforeClass
     public static void setUpClass() {
+        
     }
     
     @AfterClass
@@ -31,6 +36,10 @@ public class MovieTest {
     
     @Before
     public void setUp() {
+        little= null;
+        priceCode=0;
+        instance = new Movie(little, priceCode);
+        
     }
     
     @After
@@ -43,12 +52,11 @@ public class MovieTest {
     @Test
     public void testGetPriceCode() {
         System.out.println("getPriceCode");
-        Movie instance = null;
         int expResult = 0;
         int result = instance.getPriceCode();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        
     }
 
     /**
@@ -58,10 +66,9 @@ public class MovieTest {
     public void testSetPriceCode() {
         System.out.println("setPriceCode");
         int arg = 0;
-        Movie instance = null;
         instance.setPriceCode(arg);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        
     }
     
 }
